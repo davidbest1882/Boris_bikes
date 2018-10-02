@@ -3,3 +3,10 @@ class DockingStation
 
   end
 end
+
+
+class Bike
+  def working?
+
+  end
+end
