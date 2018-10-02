@@ -8,11 +8,11 @@ end
 =end
 
 describe DockingStation do
-    subject { DockingStation.new }
-    it {should respond_to(:release_bike)}
+    it {is_expected.to respond_to(:release_bike)}
+
 end
 
 describe Bike do
-  subject { Bike.new }
-  it { should respond_to(:working?) }
+
+  it { is_expected.to respond_to(:working?) }
 end
