@@ -9,7 +9,10 @@ end
 
 describe DockingStation do
     it {is_expected.to respond_to(:release_bike)}
-
+    it 'gets a bike' do
+      expect(DockingStation.new.release_bike).to be_a(Bike)
+      expect(Bike.new.working?).to eq true
+    end
 end
 
 describe Bike do
