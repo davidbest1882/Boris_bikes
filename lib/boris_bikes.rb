@@ -14,8 +14,12 @@ class DockingStation
   end
 
   def dock_bike(bike)
-    bike.docked = true
-    bike.docked
+    if @bike_count == 1
+      raise
+    else
+      bike.docked = true
+      bike.docked
+    end
   end
 end
 

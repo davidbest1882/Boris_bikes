@@ -25,6 +25,10 @@ describe DockingStation do
     it 'release_bike returns error' do
       expect{subject.release_bike}.to raise_error(RuntimeError, "No bikes available")
     end
+    it 'dock_bike returns error' do
+      subject.bike_count = 1
+      expect{subject.dock_bike(Bike.new)}.to raise_error
+    end
 end
 
 describe Bike do
